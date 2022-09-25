@@ -1,7 +1,7 @@
-import { AbstractControl } from "@angular/forms";
+import { AbstractControl } from '@angular/forms';
 
 export function EmailValidator(control: AbstractControl) {
-    const value = control.value;
-    const regex = /email/
-    return regex.test(value) ? null : { invalidEmail: { value: value } }
+  const value = control.value;
+  const regex = /email/;
+  return regex.test(value) ? null : { invalidEmail: { value: value } };
 }

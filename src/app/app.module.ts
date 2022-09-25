@@ -7,19 +7,10 @@ import { EmployeeModule } from './employee/employee.module';
 import { EmployerModule } from './employer/employer.module';
 import { UserManagementModule } from './user-management/user-management.module';
 
-
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    UserManagementModule,
-    EmployerModule,
-    EmployeeModule
-  ],
+  declarations: [AppComponent],
+  imports: [BrowserModule, AppRoutingModule, UserManagementModule, EmployerModule, EmployeeModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
