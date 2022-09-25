@@ -12,7 +12,7 @@ import { LoginComponent } from './user-management/components/login/login.compone
 const routes: Routes = [
   {
     path: '',
-    component: LoginComponent
+    component: LoginComponent,
   },
   {
     path: 'employer-list',
