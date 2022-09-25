@@ -11,7 +11,7 @@ import { AbstractControl, NG_VALIDATORS, ValidationErrors, Validator } from '@an
 })
 export class EmailDirective implements Validator {
 
-  constructor() { }
+  
 
   validate(control: AbstractControl): ValidationErrors | null {
     const value = control.value;

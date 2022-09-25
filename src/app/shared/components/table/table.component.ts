@@ -5,7 +5,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
   templateUrl: './table.component.html',
   styleUrls: ['./table.component.css']
 })
-export class TableComponent implements OnInit {
+export class TableComponent {
 
   @Input() headers!: string[]
   @Input() items: any = []
@@ -13,10 +13,6 @@ export class TableComponent implements OnInit {
   @Input() isDeleteOption = false
   @Output() deleteEvent = new EventEmitter<number>()
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
 
   delete(index: number) {
     this.deleteEvent.emit(index)

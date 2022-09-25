@@ -7,8 +7,7 @@ import { EmployerService } from '../../shared/service/employer.service';
 
 @Component({
   selector: 'app-employer-list',
-  templateUrl: './employer-list.component.html',
-  styleUrls: ['./employer-list.component.css']
+  templateUrl: './employer-list.component.html'
 })
 export class EmployerListComponent implements OnInit {
 

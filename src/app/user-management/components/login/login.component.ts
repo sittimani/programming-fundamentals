@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { ToastrService } from 'ngx-toastr';
-import { EmployerService } from 'src/app/employer/shared/service/employer.service';
 import { AuthService } from '../../shared/service/auth.service';
 
 @Component({

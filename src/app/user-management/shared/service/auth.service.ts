@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
-import { EmployeeService } from 'src/app/employee/shared/service/employee.service';
 import { EmployerService } from 'src/app/employer/shared/service/employer.service';
 import { LoginCreditionals } from '../interface/login.interface';
 

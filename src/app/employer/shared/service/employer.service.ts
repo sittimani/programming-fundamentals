@@ -16,7 +16,6 @@ export class EmployerService {
     }
   ]
 
-  constructor() { }
 
   public setEmployer(data: Employer) {
     this.employers.push(data)

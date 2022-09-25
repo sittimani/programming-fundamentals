@@ -23,8 +23,6 @@ export class EmployeeService {
     }
   ]
 
-  constructor() { }
-
   public setEmployee(data: Employee) {
     this.employees.push(data)
   }
