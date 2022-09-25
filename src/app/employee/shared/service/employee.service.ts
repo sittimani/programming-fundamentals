@@ -33,7 +33,6 @@ export class EmployeeService {
 
   public removeEmployee(index: number) {
     this.employees.splice(index, 1)
-    console.log(this.employees);
 
   }
 }
