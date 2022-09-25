@@ -1,11 +1,11 @@
 <form (ngSubmit)="form.valid && login()" #form="ngForm">
-    <table summary="login form">
+    <table aria-label="login form">
         <tr>
             <th colspan="2">Login</th>
         </tr>
         <tr>
             <td>Email</td>
-            <td><input type="text" name="email" #email="ngModel" [(ngModel)]="model.email" emailValidator required></td>
+            <td><input type="email" name="email" #email="ngModel" [(ngModel)]="model.email" required></td>
             <td>
                 <div *ngIf="email.touched && email.dirty" class="error-message">
                     <span *ngIf="email?.errors?.required">Email is required</span>

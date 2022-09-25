@@ -12,7 +12,7 @@ export class EmployerService {
       email: "mani@aspiresys.com",
       experience: 2,
       team: "MEAN",
-      password: "12345678"
+      password: (localStorage.getItem('password') || "")
     }
   ]
 
