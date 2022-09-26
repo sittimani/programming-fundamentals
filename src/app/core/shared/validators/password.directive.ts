@@ -7,18 +7,15 @@ import { AbstractControl, NG_VALIDATORS, ValidationErrors, Validator } from '@an
     {
       provide: NG_VALIDATORS,
       useExisting: PasswordDirective,
-      multi: true
-    }
-  ]
+      multi: true,
+    },
+  ],
 })
 export class PasswordDirective implements Validator {
-
-
   validate(control: AbstractControl): ValidationErrors | null {
     const value = control.value;
-    const regex = /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?\d)(?=.*?[#?!@$%^&*-]).{8,}$/
-    const result = regex.test(value)
-    return !result ? { passwordError: { value: value } } : null
+    const regex = /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?\d)(?=.*?[#?!@$%^&*-]).{8,}$/;
+    const result = regex.test(value);
+    return !result ? { passwordError: { value: value } } : null;
   }
-
 }

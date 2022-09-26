@@ -11,35 +11,35 @@ import { LoginComponent } from './user-management/components/login/login.compone
 
 const routes: Routes = [
   {
-    path: "",
-    component: LoginComponent
-  }, 
+    path: '',
+    component: LoginComponent,
+  },
   {
-    path: "employer-list",
+    path: 'employer-list',
     component: EmployerListComponent,
 
     canActivate: [AuthGuard],
     resolve: {
-      employers: EmployerResolver
-    }
+      employers: EmployerResolver,
+    },
   },
   {
-    path: "employee-list",
+    path: 'employee-list',
     component: EmployeeListComponent,
     canActivate: [AuthGuard],
     resolve: {
-      employees: EmployeeResolver
-    }
+      employees: EmployeeResolver,
+    },
   },
   {
-    path: "add-employee",
+    path: 'add-employee',
     component: AddEmployeeComponent,
-    canActivate: [AuthGuard]
-  }
+    canActivate: [AuthGuard],
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
