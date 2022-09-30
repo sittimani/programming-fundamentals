@@ -7,25 +7,21 @@ import { EmployerService } from '../../shared/service/employer.service';
 
 @Component({
   selector: 'app-employer-list',
-  templateUrl: './employer-list.component.html'
+  templateUrl: './employer-list.component.html',
 })
 export class EmployerListComponent implements OnInit {
+  employerList: Employer[] = [];
 
-  employerList: Employer[] = []
-
-  headers = ["name", "email", "team", "experience"]
-  items!: Employer[]
-
+  headers = ['name', 'email', 'team', 'experience'];
+  items!: Employer[];
 
   constructor(private employerService: EmployerService, private activatedRoute: ActivatedRoute) {
     // this.items = this.employerService.getEmployers()
   }
 
   ngOnInit(): void {
-    this.activatedRoute.data.subscribe(data => {
-      this.items = data.employers
-    })
-
+    this.activatedRoute.data.subscribe((data) => {
+      this.items = data.employers;
+    });
   }
-
 }
